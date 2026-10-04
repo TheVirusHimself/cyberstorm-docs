@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products · CyberStorm theme documentation</title>
+<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
+</header>
+<div class="shell">
+  <nav class="nav" aria-label="Documentation">
+    <ol>
+      <li><a href="index.html">Getting started</a></li>
+      <li><a href="theme-settings.html">Theme settings</a></li>
+      <li><a href="sections.html">Sections</a></li>
+      <li><a href="products.html" aria-current="page">Products</a></li>
+      <li><a href="collections-search.html">Collections & search</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="conversion.html">Conversion tools</a></li>
+      <li><a href="languages-accessibility.html">Languages & accessibility</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+  </nav>
+  <main id="content" class="content" tabindex="-1">
+<h1>Products</h1>
+<p class="lead">The product page centers the product on a holographic stage, with information on one side and buying on the other. On phones the product always comes first.</p>
+
+<h2>Layout and stage</h2>
+<ul>
+  <li><strong>Layout:</strong> product in the center, on the left or on the right.</li>
+  <li><strong>Product image style:</strong> <em>Float</em> suits transparent PNGs; <em>Lens</em> crops photos with backgrounds into a circle.</li>
+  <li><strong>HUD rings:</strong> the animated rings around the product; turn off for a calmer stage.</li>
+  <li><strong>Media nodes:</strong> each image, video and 3D model is a circular node under the stage; arrow keys and swipes work too.</li>
+</ul>
+
+<h2>Colors and variants</h2>
+<ol>
+  <li>Name your color option <strong>Color</strong> (or <strong>Colour</strong>).</li>
+  <li>Common color names (black, graphite, magenta, yellow…) get a matching swatch automatically. For exact colors, set swatches on the option in the product editor; Shopify’s swatches always win.</li>
+  <li>Assign an image to each color variant. Choosing a color shows its image, and choosing a color’s image in the stage selects that color, so shoppers always add what they last looked at.</li>
+</ol>
+<p>The buy area shows the selected variant (“Selected // Yellow / M”) with a swatch on the Add to cart button, and briefly highlights it whenever it changes.</p>
+
+<h2>3D models, video and AR</h2>
+<p>Add models (GLB) and videos as product media. The 3D button appears only when a product has a model, and the model downloads only when a shopper opens it. On phones that support it, a compact <strong>View in your space</strong> button appears under the nodes.</p>
+
+<h2>Blocks</h2>
+<table>
+  <tr><th>Block</th><th>Notes</th></tr>
+  <tr><td>Title</td><td>Shows the category trail above the title when categories are set up.</td></tr>
+  <tr><td>Price and stock</td><td>“Only X left” at or below your threshold, for tracked inventory.</td></tr>
+  <tr><td>Variant picker</td><td>Buttons, swatches or a dropdown for long lists; optional size guide page that opens in a panel.</td></tr>
+  <tr><td>Buy buttons</td><td>Quantity, accelerated checkout and pickup availability.</td></tr>
+  <tr><td>Trust lines</td><td>Up to three short assurances with icons. Only promises you keep.</td></tr>
+  <tr><td>Detail tabs</td><td>Description plus two tabs (such as Shipping and Care). Connect tab content to metafields for per-product text.</td></tr>
+  <tr><td>Specifications</td><td>Up to six label and value rows. Connect values to product metafields (the database icon) so each product shows its own specs.</td></tr>
+  <tr><td>Text, Apps</td><td>Free text and app blocks (such as reviews or back-in-stock alerts).</td></tr>
+</table>
+
+<h2>Badges, pre-orders and the sticky bar</h2>
+<ul>
+  <li>Tag a product <code>pre-order</code> (or <code>preorder</code>) to change its buttons to “Pre-order”.</li>
+  <li>Tag <code>badge:Your text</code> for your own card badges. See <a href="theme-settings.html">Theme settings → Badges</a>.</li>
+  <li>On phones and tablets, a sticky bar with price and Add to cart appears once the main button scrolls away (product section setting).</li>
+</ul>
+
+<h2>Quick view and quick buy</h2>
+<p>On product cards, <strong>Choose options</strong> opens a quick view with the product’s options. With <strong>Quick buy on cards</strong> on (a setting in the sections that show cards), shoppers pick color and size on the card itself and add to cart without leaving the page.</p>
+
+  </main>
+</div>
+<footer class="foot">
+  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+</footer>
+</body>
+</html>

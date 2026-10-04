@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Categories · CyberStorm theme documentation</title>
+<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
+</header>
+<div class="shell">
+  <nav class="nav" aria-label="Documentation">
+    <ol>
+      <li><a href="index.html">Getting started</a></li>
+      <li><a href="theme-settings.html">Theme settings</a></li>
+      <li><a href="sections.html">Sections</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="collections-search.html">Collections & search</a></li>
+      <li><a href="categories.html" aria-current="page">Categories</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="conversion.html">Conversion tools</a></li>
+      <li><a href="languages-accessibility.html">Languages & accessibility</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+  </nav>
+  <main id="content" class="content" tabindex="-1">
+<h1>Categories</h1>
+<p class="lead">Optional. CyberStorm can turn your own category tree into an interactive map, category trails on product and collection pages, and category pages.</p>
+
+<h2>1. Create the category tree</h2>
+<p>In <strong>Settings → Custom data → Metaobjects</strong>, create one definition per level, for example <em>Department</em>, <em>Category</em>, <em>Subcategory</em> and <em>Product group</em>. Give each a <code>name</code> field and, below the top level, a <code>parent</code> field that references the level above. Then add your entries.</p>
+
+<h2>2. Assign products</h2>
+<p>In <strong>Settings → Custom data → Products</strong>, add one metafield per level that references the matching metaobject, for example <code>custom.department</code> … <code>custom.product_group</code>. Fill them on each product (bulk editing or a product import is quickest). A product’s trail follows its deepest filled field.</p>
+<div class="note">Alternative without product fields: give each category entry a collection field. A product then belongs to the deepest category whose collection contains it.</div>
+
+<h2>3. Connect the theme</h2>
+<p>In <strong>Theme settings → Categories</strong>, enter each level’s metaobject type handle, the product field keys and the entry field keys (usually <code>name</code> and <code>parent</code>).</p>
+
+<h2>4. The category map</h2>
+<p>Create a page (for example “Categories”) with the <strong>categories</strong> template, then set it as <strong>Category map page</strong>. Visitors pan and zoom the map; hovering a node lights its path to the top. A list view shows the same tree as plain links.</p>
+
+<h2>5. Category pages (optional)</h2>
+<p>Add the product category fields as filters in Search &amp; Discovery, then turn on <strong>Category pages from filters</strong>. Each category then opens All products filtered to it, titled with its name and showing its trail and subcategories.</p>
+
+  </main>
+</div>
+<footer class="foot">
+  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+</footer>
+</body>
+</html>
