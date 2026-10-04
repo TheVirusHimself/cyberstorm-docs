@@ -59,7 +59,8 @@ a:hover { color: var(--accent); }
 }
 
 .nav { border-right: 1px solid var(--line); padding: 24px 16px; }
-.nav ol { list-style: none; margin: 0; padding: 0; position: sticky; top: 80px; }
+/* Short windows: the pinned list scrolls on its own so the last links stay reachable. */
+.nav ol { list-style: none; margin: 0; padding: 0; position: sticky; top: 80px; max-height: calc(100vh - 96px); overflow-y: auto; }
 .nav a {
   display: block;
   padding: 6px 10px;
