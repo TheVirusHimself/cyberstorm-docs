@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 3D space · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
+</header>
+<div class="shell">
+  <nav class="nav" aria-label="Documentation">
+    <ol>
+      <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html" aria-current="page">The 3D space</a></li>
+      <li><a href="theme-settings.html">Theme settings</a></li>
+      <li><a href="sections.html">Sections</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
+      <li><a href="collections-search.html">Collections & search</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="conversion.html">Conversion tools</a></li>
+      <li><a href="languages-accessibility.html">Languages & accessibility</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+  </nav>
+  <main id="content" class="content" tabindex="-1">
+<h1>The 3D space</h1>
+<p class="lead">On the home page, Cyber lays your store out as a route through a city. Each block of the <strong>Cyber space</strong> section is a stop; the camera flies from one to the next and lands with the stop centred on screen.</p>
+
+<h2>Getting around</h2>
+<ul>
+  <li><strong>Stop menu:</strong> a carousel of the stops, each with a small picture taken from the stop. Theme settings → Storm → <em>Stop menu position</em> places it on the left (default), under the header, at the bottom or on the right; phones always use the bottom.</li>
+  <li><strong>Keyboard:</strong> the left and right arrows and the space bar move between stops; Tab moves through each stop’s links and flies to the stop that holds them.</li>
+  <li><strong>Addresses:</strong> each stop has its own address (<code>#stop-3</code>), so links can open on a stop, and the browser’s Back button returns to the previous one.</li>
+  <li><strong>Scrolling</strong> scrolls the page as usual; a stop with more than fits on screen (a big batch of products) scrolls inside itself.</li>
+</ul>
+
+<h2>3D or page view</h2>
+<p>The <strong>3D / Page</strong> switch in the header lets every visitor choose; the choice is remembered in their browser. Page view shows the same stops as a regular scrolling page, chapter by chapter.</p>
+<ul>
+  <li>Theme settings → Storm → <em>Visitors start in</em> sets the default: 3D flight or Regular page.</li>
+  <li>Visitors whose device asks for reduced motion start in page view. If they choose 3D anyway, flights land instantly and the clouds stay still.</li>
+</ul>
+
+<h2>The stops</h2>
+<table>
+  <thead><tr><th>Block</th><th>What it shows</th></tr></thead>
+  <tbody>
+    <tr><td>Image (Release)</td><td>A wide banner with a heading, text and two buttons. Leave it empty and it uses Shopify’s <em>Home page</em> collection image (or the first collection with an image), that collection’s title and description, then your store name and description.</td></tr>
+    <tr><td>Intro</td><td>Your heading and text, or your store name and description.</td></tr>
+    <tr><td>Featured product</td><td>One product in a circular lens with an info card beside it. <em>Finish</em> picks a variant by an option value (for example <code>Black</code> or <code>80 cm</code>): the stop shows that variant’s photo, price and stock and links to it. An optional background image or video fills the lens behind the product.</td></tr>
+    <tr><td>Collections (Series)</td><td>Your collections as a list beside a scope: choosing one locks it in, with its photo and a strip of its products. Or a cluster of hexagons.</td></tr>
+    <tr><td>Products (Pieces)</td><td>A rack: the chosen piece large on the left with its price and stock, the others on a rail to step through. Or a ring of products.</td></tr>
+    <tr><td>Story</td><td>One article from your blog as a spread: its image, the date and author, the title, the opening lines and a link. Hidden until an article is chosen.</td></tr>
+    <tr><td>Closing link</td><td>The archive: a portal to all products, with the product count.</td></tr>
+  </tbody>
+</table>
+<p>Each block has <em>Name in the stop menu</em>, an optional info card, and its own angle. Reorder blocks to change the route.</p>
+<p><strong>Hide stops without content</strong> (section setting, off by default) leaves out stops that have nothing to show yet, such as Collections in a store without collections. In the theme editor every stop always shows, so you can fill it.</p>
+
+<h2>The city and the clouds</h2>
+<p>Theme settings → Storm holds the scene:</p>
+<table>
+  <thead><tr><th>Part</th><th>Settings</th></tr></thead>
+  <tbody>
+    <tr><td>Colors</td><td>Sky, ground and buildings.</td></tr>
+    <tr><td>City</td><td>On or off, how many buildings, energy pulses in the streets, see-through buildings.</td></tr>
+    <tr><td>Clouds</td><td>On or off, digital dots (they part around the pointer) or soft clouds, how many between stops, opacity, drift speed, tone, and occasional flashes.</td></tr>
+    <tr><td>Regular pages</td><td>The dotted cloud backdrop behind every other page.</td></tr>
+    <tr><td>Outer glow</td><td>The soft glow around frames and panels: strength, and text color or accent color. <em>Frame lines</em>: white or the text color.</td></tr>
+    <tr><td>On phones</td><td>City, clouds and the lines between stops, each on or off.</td></tr>
+  </tbody>
+</table>
+<p>The animations run only while they can be seen: they stop in a background tab, when the scene scrolls out of view, and for reduced-motion visitors.</p>
+
+<h2>Collection pages</h2>
+<p>Collection pages use the same space: the collection’s own stop first, then its products in batches. See <a href="collections-search.html">Collections &amp; search</a>.</p>
+
+  </main>
+</div>
+<footer class="foot">
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
+</footer>
+</body>
+</html>

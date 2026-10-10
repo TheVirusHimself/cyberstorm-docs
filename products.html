@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Products · CyberStorm theme documentation</title>
-<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<title>Products · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
 <link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
-  <span class="version">v1.1.0</span>
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
 </header>
 <div class="shell">
   <nav class="nav" aria-label="Documentation">
     <ol>
       <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
       <li><a href="theme-settings.html">Theme settings</a></li>
       <li><a href="sections.html">Sections</a></li>
       <li><a href="products.html" aria-current="page">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
       <li><a href="collections-search.html">Collections & search</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="cart.html">Cart</a></li>
@@ -32,65 +34,73 @@
   </nav>
   <main id="content" class="content" tabindex="-1">
 <h1>Products</h1>
-<p class="lead">The product page centers the product on a holographic stage, with information on one side and buying on the other. On phones the product always comes first.</p>
+<p class="lead">The product page puts the photo on an inspection stage, with the product’s information on one side and buying on the other. On phones the photo always comes first.</p>
 
-<h2>Layout and stage</h2>
-<ul>
-  <li><strong>Layout:</strong> product in the center, on the left or on the right.</li>
-  <li><strong>Product image style:</strong> <em>Float</em> suits transparent PNGs; <em>Lens</em> crops photos with backgrounds into a circle.</li>
-  <li><strong>HUD rings:</strong> the animated rings around the product; turn off for a calmer stage.</li>
-  <li><strong>Media nodes:</strong> each image, video and 3D model is a circular node under the stage; arrow keys and swipes work too.</li>
-</ul>
-
-<h2>Colors and variants</h2>
-<ol>
-  <li>Name your color option <strong>Color</strong> (or the word for color in your store's language, such as Farbe, Couleur, カラー or 颜色). An option whose values have Shopify swatches always counts as the color option.</li>
-  <li>Common color names (black, graphite, magenta, yellow…) get a matching swatch automatically. For exact colors, set swatches on the option in the product editor; Shopify’s swatches always win.</li>
-  <li>Assign an image to each color variant. Choosing a color shows its image, and choosing a color’s image in the stage selects that color, so shoppers always add what they last looked at.</li>
-</ol>
-<p>The buy area shows the selected variant (“Selected // Yellow / M”) with a swatch on the Add to cart button, and briefly highlights it whenever it changes.</p>
-
-<h2>3D models, video and AR</h2>
-<p>Add models (GLB) and videos as product media. The 3D button appears only when a product has a model, and the model downloads only when a shopper opens it. On phones that support it, a compact <strong>View in your space</strong> button appears under the nodes.</p>
-
-<h2>Blocks</h2>
+<h2>The stage</h2>
 <table>
-  <tr><th>Block</th><th>Notes</th></tr>
-  <tr><td>Title</td><td>Shows the category trail above the title when categories are set up.</td></tr>
-  <tr><td>Price and stock</td><td>“Only X left” at or below your threshold, for tracked inventory. When a sold-out or backordered variant has stock on the way in a Shopify inventory transfer, a line says when it is expected (“Back in stock by …”).</td></tr>
-  <tr><td>Variant picker</td><td>Buttons, swatches or a dropdown for long lists; optional size guide page that opens in a panel. <strong>Picker style</strong>: buttons, dropdowns, or dropdowns with color swatches kept. Options with more than 10 values always use a dropdown; sold-out choices stay selectable and are marked Unavailable, so Notify me still works.</td></tr>
-  <tr><td>Ask a question</td><td>A collapsible form under the product tabs: name, email, optional phone and message. Questions arrive at your store's sender email (Settings &gt; Notifications) with the product name and link.</td></tr>
-  <tr><td>SKU</td><td>The selected variant's SKU in the readout font; it changes with the options and hides for variants without one.</td></tr>
-  <tr><td>Share</td><td>Copy link and the networks from Theme settings &gt; Social media &gt; Sharing options; on phones, the phone's share sheet. Blog posts have the same row (Blog post section &gt; Show share buttons).</td></tr>
-  <tr><td>Buy buttons</td><td>Quantity, accelerated checkout and pickup availability. <strong>Show Notify me when sold out</strong> adds a back-in-stock form to sold-out variants (see below).</td></tr>
-  <tr><td>Trust lines</td><td>Up to three short assurances with icons. Only promises you keep.</td></tr>
-  <tr><td>Detail tabs</td><td>Description plus two tabs (such as Shipping and Care). Connect tab content to metafields for per-product text.</td></tr>
-  <tr><td>Specifications</td><td>Up to six label and value rows. Connect values to product metafields (the database icon) so each product shows its own specs.</td></tr>
-  <tr><td>Text, Apps</td><td>Free text and app blocks (such as reviews or back-in-stock alerts).</td></tr>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Layout</td><td>Product in the center (info left, buying right), on the left or on the right.</td></tr>
+    <tr><td>Product photo frame</td><td><strong>Circle</strong>, <strong>Hexagon</strong> or <strong>Rectangle</strong> crop the photo to that shape inside a slim frame; the radar behind takes the same shape. <strong>Floating (no crop)</strong> shows the whole photo, for transparent PNGs.</td></tr>
+    <tr><td>Photo mat</td><td>A band between the cut photo and its frame, 0 to 48 px; 0 removes it. <em>Mat colour</em> sets its color (empty: the color scheme’s white).</td></tr>
+    <tr><td>Show HUD rings</td><td>The radar lines behind the photo.</td></tr>
+    <tr><td>Sticky add-to-cart bar</td><td>A bar with price and Add to cart once the main button scrolls away.</td></tr>
+  </tbody>
 </table>
+<p>The stage grows to the screen’s height on wide screens. Several photos, videos and 3D models appear as a chain of nodes under it; arrow keys and swipes work too, and photos open in a zoom view. A 3D button appears only when a product has a model (GLB), with <em>View in your space</em> on phones that support AR.</p>
 
-<h2>Notify me when it's back</h2>
-<p>Turn on <strong>Show Notify me when sold out</strong> in the Buy buttons block. When a shopper picks a sold-out variant, a small panel asks for their email. It is sent with your store's contact form, so it arrives in the inbox set under <strong>Settings &gt; Notifications</strong> (sender email), with the product, variant and a link. Write back when the stock returns. No app is needed; if you later install a back-in-stock app, turn this off.</p>
-<p>Shopify may show a spam check (captcha) on some submissions; the form then continues on that page and returns to the product.</p>
+<h2>Annotations</h2>
+<p>Add up to four <strong>Annotation</strong> blocks: a short label and value pinned to a corner of the stage (an edition, a material, a size). Connect the value to a product metafield (the database icon) so each product shows its own; empty values are hidden. On phones they list under the photo.</p>
 
-<h2>Badges, pre-orders and the sticky bar</h2>
+<h2>Blocks and zones</h2>
+<p>Blocks go to fixed zones, so the page keeps its shape whatever order you add them in:</p>
 <ul>
-  <li>Tag a product <code>pre-order</code> (or <code>preorder</code>) to change its buttons to “Pre-order”.</li>
-  <li>Tag <code>badge:Your text</code> for your own card badges. See <a href="theme-settings.html">Theme settings → Badges</a>.</li>
-  <li>On phones and tablets, a sticky bar with price and Add to cart appears once the main button scrolls away (product section setting).</li>
+  <li><strong>Info panel:</strong> Title, Price and stock, SKU, Share, Text.</li>
+  <li><strong>Buy panel:</strong> Variant picker, Buy buttons, Trust lines, Custom Liquid and app blocks (such as reviews or subscriptions).</li>
+  <li><strong>Below:</strong> Detail tabs, Specifications, Ask a question.</li>
+</ul>
+<p>Reorder blocks within a zone to change their order there.</p>
+
+<h2>Variants</h2>
+<ul>
+  <li>Buttons, swatches or a dropdown; options with Shopify swatches show as swatches. Unavailable combinations are struck through.</li>
+  <li>Assign an image to each variant: choosing a variant shows its photo, and choosing a photo selects its variant.</li>
+  <li>The buy panel names the selected variant (“Selected // Black / 80 cm”) and its price.</li>
+  <li>Products with many variants work up to Shopify’s 2,048. On products with more than 250 variants, choosing a photo selects its variant only for the first 250; options themselves always work. The <code>product.high-variant</code> template uses dropdowns for long option lists.</li>
 </ul>
 
-<h2>Quick view and quick buy</h2>
-<p>On product cards, <strong>Choose options</strong> opens a quick view with the product’s media (including video and 3D) and options. With <strong>Quick buy on cards</strong> on (a setting in the sections that show cards), shoppers pick color and size on the card itself and add to cart without leaving the page.</p>
+<h2>Quantity rules</h2>
+<p>Minimum, maximum and increment rules set in Shopify (B2B catalogs and volume pricing) are followed everywhere a quantity can be chosen: the product page, the cart drawer, the cart page and bundles. The rule is shown under the quantity (“Minimum 5 · In steps of 5”); a quantity that breaks it is corrected and the shopper is told. With the quantity selector hidden, the minimum is still added.</p>
 
-<h2>Gift cards</h2>
-<p>Create a gift card in <strong>Products → Gift cards → Add gift card product</strong>. On its product page, shoppers can tick <strong>Send as a gift to someone</strong> and enter the recipient’s email, an optional name, a message of up to 200 characters and a send date up to 90 days ahead. Shopify then emails the gift card to that person on that date. Leave the box unticked to receive the gift card yourself.</p>
-<p>The page the recipient opens from the gift card email shows the card as a holographic panel that tilts toward the pointer, with the balance and code in the readout font, a QR code for in-store use, Copy code, Print (a clean black-and-white card) and Add to Apple Wallet. Preview it from the theme editor or with <code>shopify theme dev</code> (press <kbd>g</kbd>).</p>
+<h2>Sold out, restock requests and the archive</h2>
+<ul>
+  <li><strong>Sold out</strong>: a temporary stockout. With <em>Show a restock request form when sold out</em> (Buy buttons block), a shopper can leave their email; it reaches you through your store’s contact form (the inbox under Settings → Notifications). It is a request you answer yourself, not an automatic email.</li>
+  <li><strong>Archived</strong>: a piece that will not come back. Tag the product <code>archive</code> (Theme settings → Badges → <em>Archive tag</em> sets the tag): when it is sold out it reads “Archived” everywhere instead of “Sold out”, and offers no restock request.</li>
+  <li>Incoming stock from Shopify inventory transfers shows as a dated line when Shopify has it.</li>
+</ul>
+
+<h2>Price data (optional)</h2>
+<p>Price history (a chart of the price over time) and units sold (“128 sold”) can be turned on in the Price and stock block. Both read product metafields your store keeps up to date. See <a href="price-data.html">Price data</a>.</p>
+
+<h2>Templates</h2>
+<table>
+  <thead><tr><th>Template</th><th>Use it for</th></tr></thead>
+  <tbody>
+    <tr><td>product</td><td>Every product by default.</td></tr>
+    <tr><td>product.preorder</td><td>Products not out yet: the button reads Pre-order and a note says so. Write your own expected date and how you ship pre-orders in the note.</td></tr>
+    <tr><td>product.drop</td><td>A limited release with a countdown to its date.</td></tr>
+    <tr><td>product.high-variant</td><td>Products with long option lists (dropdowns).</td></tr>
+  </tbody>
+</table>
+<p>Assign a template in the product editor under <em>Theme template</em>. Tag a product <code>pre-order</code> (or <code>preorder</code>) to change its button to Pre-order on any template.</p>
+
+<h2>Quick view and gift cards</h2>
+<p>On product cards, <em>Choose options</em> opens a quick view with the product’s media and options. For gift cards, shoppers can send the card to someone with a recipient email, an optional name, a message and a send date; the gift card page shows the balance, code, a QR code and Copy code.</p>
 
   </main>
 </div>
 <footer class="foot">
-  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
 </footer>
 </body>
 </html>

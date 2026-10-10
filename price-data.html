@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price data · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
+</header>
+<div class="shell">
+  <nav class="nav" aria-label="Documentation">
+    <ol>
+      <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
+      <li><a href="theme-settings.html">Theme settings</a></li>
+      <li><a href="sections.html">Sections</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html" aria-current="page">Price data</a></li>
+      <li><a href="collections-search.html">Collections & search</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="conversion.html">Conversion tools</a></li>
+      <li><a href="languages-accessibility.html">Languages & accessibility</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+  </nav>
+  <main id="content" class="content" tabindex="-1">
+<h1>Price data</h1>
+<p class="lead">Two optional pieces of information under the product price: <strong>price history</strong>, a chart of how the price changed, and <strong>units sold</strong>, a count such as “128 sold”. Both are off until you turn them on, and both stay hidden on a product until it has data.</p>
+
+<h2>What shoppers see</h2>
+<ul>
+  <li><strong>Price history:</strong> one sentence and a small line under the price: “Lowest price in 6 months”, “Price unchanged for 3 months” or “Lowest price in the last 30 days: …”. Opening it shows the price over 3 months, 6 months, 1 year or all, the price on the day under the pointer, and today / lowest / highest. Screen readers get a description of the chart and the list of changes.</li>
+  <li><strong>Units sold:</strong> “128 sold” beside the stock status.</li>
+</ul>
+
+<h2>Turn them on</h2>
+<p>Theme editor → Product page → the <strong>Price and stock</strong> block → <em>Price data</em>:</p>
+<table>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Show price history</td><td>The sentence, line and chart.</td></tr>
+    <tr><td>Show units sold</td><td>The “N sold” readout.</td></tr>
+    <tr><td>Show from</td><td>The smallest number that shows (default 10), so a new product does not read “2 sold”.</td></tr>
+  </tbody>
+</table>
+
+<h2>Where the data comes from</h2>
+<p>A theme can show store data but cannot record it: it cannot remember old prices or count sales on its own. Both numbers live in <strong>product metafields</strong> that the store keeps up to date, by hand, with Shopify Flow, with an app, or with a script that uses Shopify’s Admin API.</p>
+<table>
+  <thead><tr><th>Information</th><th>Namespace and key</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>Price history</td><td><code>cyber.price_history</code></td><td>JSON</td></tr>
+    <tr><td>Units sold</td><td><code>cyber.units_sold</code></td><td>Integer</td></tr>
+  </tbody>
+</table>
+<div class="note">Create both as metafield definitions first (Settings → Custom data → Products → Add definition) with exactly these namespaces, keys and types. They then appear on every product’s page in the admin, where you can fill them in.</div>
+
+<h2>Price history format</h2>
+<pre><code>{
+  "v": 1,
+  "p": [
+    ["2026-04-01", 210.00, 350.00],
+    ["2026-06-15", 235.00],
+    ["2026-08-20", 189.00, 350.00]
+  ]
+}</code></pre>
+<ul>
+  <li><code>v</code> is the format version, always <code>1</code>.</li>
+  <li><code>p</code> has one row per price change, oldest first: the day the price started (<code>YYYY-MM-DD</code>), the price as a number in your store currency (a dot for decimals, no currency sign), and optionally the compare-at price at the time.</li>
+  <li>Only the days a price changed are needed; daily rows work too, repeats are skipped. Rows dated in the future are ignored.</li>
+  <li>Today’s price needs no row: the theme adds the product’s current price, so the line always ends at what the shopper pays now.</li>
+  <li>The history appears once a product has at least one price change or 30 days of history.</li>
+</ul>
+<p><strong>Write the whole history every time.</strong> A metafield is replaced, not added to: when a price changes, save the full list with the new row added.</p>
+
+<h3>With an app or a script</h3>
+<p>Anything with Admin API access can write the history with the <code>metafieldsSet</code> mutation (owner: the product; namespace <code>cyber</code>; key <code>price_history</code>; type <code>json</code>; value: the JSON above as text). Up to 25 products per call; for a whole catalogue use a bulk operation.</p>
+
+<h2>Keeping units sold up to date</h2>
+<p>Any whole number works. To count sales automatically with <strong>Shopify Flow</strong> (free in your admin):</p>
+<ol>
+  <li>Trigger: <strong>Order created</strong>.</li>
+  <li>Add <strong>For each</strong> over the order’s line items.</li>
+  <li>Action: <strong>Update product metafield</strong>, namespace <code>cyber</code>, key <code>units_sold</code>, type integer, value: the product’s current <code>cyber.units_sold</code> plus the line item’s quantity.</li>
+  <li>Place a test order and check the product’s metafield before relying on it.</li>
+</ol>
+<p>Refunds and cancellations are not subtracted unless you add a workflow for them. You can also simply update the number by hand from time to time.</p>
+
+<h2>Check it</h2>
+<ol>
+  <li>Fill both metafields on one product.</li>
+  <li>Turn the settings on in the Price and stock block.</li>
+  <li>Open the product: “N sold” beside the stock, and the line and sentence under the price.</li>
+  <li>Open the price history: the chart, the period buttons and today / lowest / highest.</li>
+</ol>
+
+  </main>
+</div>
+<footer class="foot">
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
+</footer>
+</body>
+</html>

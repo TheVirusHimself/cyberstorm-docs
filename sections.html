@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sections · CyberStorm theme documentation</title>
-<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<title>Sections · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
 <link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
-  <span class="version">v1.1.0</span>
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
 </header>
 <div class="shell">
   <nav class="nav" aria-label="Documentation">
     <ol>
       <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
       <li><a href="theme-settings.html">Theme settings</a></li>
       <li><a href="sections.html" aria-current="page">Sections</a></li>
       <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
       <li><a href="collections-search.html">Collections & search</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="cart.html">Cart</a></li>
@@ -32,69 +34,69 @@
   </nav>
   <main id="content" class="content" tabindex="-1">
 <h1>Sections</h1>
-<p class="lead">Add sections to any page with <strong>Add section</strong> in the theme editor. Each has its own help text; this page explains what each one is for.</p>
+<p class="lead">Add sections to any page with <em>Add section</em> in the theme editor. Each has its own help text; this page explains what each one is for. The home page and collection pages are built from the 3D space sections, see <a href="space.html">The 3D space</a>.</p>
 
 <h2>Header and footer</h2>
 <table>
-  <tr><th>Section</th><th>Use it for</th></tr>
-  <tr><td>Announcement bar</td><td>A one-line message above the header, optionally a link.</td></tr>
-  <tr><td>Header</td><td>Logo, menu (dropdown or <strong>mega menu</strong>), categories button, search field, account and cart. The header can stay visible always or reappear when scrolling up. Add <strong>Menu promotion</strong> blocks to show promo tiles inside the mega menu. <strong>Layout</strong>: logo left, logo centered with the menu below, logo centered with the menu on the left, or the menu in a drawer on every screen (phones always use the drawer). Links that do not fit on one row move into a <strong>More</strong> menu, so long labels never wrap the header. <strong>Transparent over the first section</strong> lays the header over the homepage hero or slideshow (and collection pages whose image leads the page, with breadcrumbs off); it turns solid on scroll or when a menu opens. An optional <strong>Logo over the first section</strong> swaps in a version that reads on dark art. <strong>Show a top bar</strong> adds a thin strip above the header with a second menu (Help, Store locator), social links and the country/currency and language selectors; it is hidden on phones.</td></tr>
-  <tr><td>Footer</td><td>Text, menu and newsletter blocks, social links, payment icons, policies, country and language selectors, Follow on Shop.</td></tr>
-  <tr><td>Popup, Age check</td><td>Added in the footer area. See <a href="conversion.html">Conversion tools</a>.</td></tr>
+  <thead><tr><th>Section</th><th>Use it for</th></tr></thead>
+  <tbody>
+    <tr><td>Cyber header</td><td>The HUD bar: your logo (or store name) with a one-line status message under it, the menu as numbered tabs, and modules for the 3D / Page switch, search, favorites, account and cart, joined by an optional connector line. Nested menu links open as dropdowns. When the tabs don’t fit beside the logo and modules (many links, a long name, a narrow window), they move into a Menu button, as on phones.</td></tr>
+    <tr><td>Footer</td><td>A sheet pulled up from a handle at the bottom of the screen, with Text, Menu and Newsletter blocks, social links, payment icons, policy links, the country and language selectors and Follow on Shop. While reading, the handle tucks into a slim bar and comes back when you scroll up or reach the end of the page. Leave the text block empty to use your store description.</td></tr>
+    <tr><td>Announcement bar</td><td>A one-line message, optionally a link.</td></tr>
+    <tr><td>Popup, Age check</td><td>Added in the footer area. See <a href="conversion.html">Conversion tools</a>.</td></tr>
+  </tbody>
 </table>
 
-<h2>Homepage and content sections</h2>
+<h2>Content sections</h2>
 <table>
-  <tr><th>Section</th><th>Use it for</th></tr>
-  <tr><td>Depth hero</td><td>The signature opener: a background word, a foreground cutout image that moves on scroll, and a text panel. Use a transparent PNG for the foreground.</td></tr>
-  <tr><td>Slideshow</td><td>Up to six image or muted-video slides. Optional autoplay always has a pause button and stops for reduced-motion visitors.</td></tr>
-  <tr><td>Shop by category</td><td>Large tiles into key collections. Columns, tile shape, image fit, title position, hover effect, badges and subtitles are all settings.</td></tr>
-  <tr><td>Collection collage</td><td>Two to five collections in a mosaic with one large tile.</td></tr>
-  <tr><td>Featured collection</td><td>Products from one collection. Turn on <strong>Quick buy on cards</strong> so shoppers pick color and size and add to cart in place. Set <strong>Layout</strong> to Carousel for one swipeable row with arrow buttons.</td></tr>
-  <tr><td>Featured product</td><td>One product on the holographic stage with all its media (photos, video, YouTube or Vimeo, 3D and AR), options and buy buttons, on any page. Shoppers change options and add to cart without leaving the page. Supports app blocks and Custom Liquid blocks.</td></tr>
-  <tr><td>Holo carousel</td><td>Products from a collection or a list, or your own images, on a curved holographic ring: the front item is full size and lit (with quick add on product cards), the others tilt back and dim. Shoppers drag, swipe, use the arrow keys or the segments; a click on a side item brings it forward. Choose the ring depth (flat, curved, deep), how many items show, captions, and optional autoplay with a pause button. With motion off, for visitors who reduce motion, and on narrow phones it becomes a flat swipe row.</td></tr>
-  <tr><td>Loadout (shop the outfit)</td><td>An equipment screen of slots (Head, Torso, Legs, Hands, Gear: your labels). Each slot holds up to six products to swap through with arrows, each with its own size or color; shoppers untick slots they do not want, watch the total, and add the whole loadout to the cart in one click.</td></tr>
-  <tr><td>Promo grid</td><td>A campaign grid of mixed tiles: image, video, product, collection and sale text. Give each tile a width (a third, half, two thirds or the full row) and choose one tile height, so a single section can carry a whole homepage campaign. Videos play muted with a pause button, and not at all for visitors who reduce motion.</td></tr>
-  <tr><td>Map</td><td>Your shop's address and opening hours with a <strong>Get directions</strong> button. No API key: the Google Maps embed loads only when a visitor clicks <strong>Show the map</strong> (faster pages, no Google cookies before that). Add a shop-front photo to show until then.</td></tr>
-  <tr><td>Timeline</td><td>Milestones (date, heading, text, image) on a vertical circuit trace that lights up node by node as visitors scroll. Use real dates from your story.</td></tr>
-  <tr><td>Text columns with images</td><td>Two to six columns, each with an image (square, portrait, circle or framed with notched corners), heading, text and a link. <strong>Number the columns as steps</strong> adds 01, 02, 03 for real sequences such as how ordering or a repair works.</td></tr>
-  <tr><td>Blog posts</td><td>The latest posts from one blog as cards. Choose how many, columns, image shape, and whether cards show the date, author, comment count, excerpt and tags. A chosen blog with no posts yet stays hidden on the storefront.</td></tr>
-  <tr><td>Quick order list</td><td>Every variant of one product, or of a collection's products, in one table: SKU, price, stock and a quantity stepper per row, with a live item count and subtotal and one <strong>Add all to cart</strong>. For wholesale, multipacks and size runs. Quantity rules (minimum, maximum, increments) set in your B2B catalogs are respected. Added to a product template with no product chosen, it lists the product being viewed.</td></tr>
-  <tr><td>Custom Liquid</td><td>Paste Liquid, HTML or an app's embed code. Available on every page; product and featured product sections also take Custom Liquid blocks. If code breaks the page, delete it here.</td></tr>
-  <tr><td>Brand showcase</td><td>Spotlights one vendor: a panel with logo, story and a link to the vendor’s page, beside that vendor’s products. Type the vendor exactly as it appears on your products; the products load automatically, so no collection is needed. Choose the product order (best selling, newest, price) and grid or carousel.</td></tr>
-  <tr><td>Shoppable image</td><td>Numbered hotspots on a photo, each opening a product card or a note. The “Image with product list” layout is a lookbook; placed first on a page it is a shoppable hero.</td></tr>
-  <tr><td>Image with text, Image banner, Rich text</td><td>Editorial stories, campaign banners and text blocks.</td></tr>
-  <tr><td>Video</td><td>An uploaded video, YouTube or Vimeo. Plays on click (the player loads only then) or as a muted background loop with a pause button.</td></tr>
-  <tr><td>Before/after slider</td><td>Two images compared with a draggable divider; works with the keyboard too.</td></tr>
-  <tr><td>Testimonials</td><td>Quotes from real customers, with an optional rating and product link.</td></tr>
-  <tr><td>Logo list</td><td>Press mentions, partner brands or stockists.</td></tr>
-  <tr><td>Countdown</td><td>Counts down to a real end date. See <a href="conversion.html">Conversion tools</a>.</td></tr>
-  <tr><td>Service benefits</td><td>Short promises with icons, such as shipping and returns. Only use promises you keep.</td></tr>
-  <tr><td>FAQ</td><td>Questions and answers that expand in place.</td></tr>
-  <tr><td>Scrolling text</td><td>A marquee of short messages; can be kept still.</td></tr>
-  <tr><td>Newsletter</td><td>An email signup. Subscribers appear in Customers with the tag <code>newsletter</code>.</td></tr>
-  <tr><td>Best sellers, Recently viewed, Customers also bought</td><td>Automatic product rows from your sales, the visitor’s history (kept in their browser only) and Shopify’s recommendations. Best sellers can also be a carousel, with quick buy on its cards.</td></tr>
+  <thead><tr><th>Section</th><th>Use it for</th></tr></thead>
+  <tbody>
+    <tr><td>Depth hero</td><td>An opener for regular pages: a background word, a foreground cutout image that moves on scroll, and a text panel. Use a transparent PNG for the foreground.</td></tr>
+    <tr><td>Slideshow</td><td>Up to six image or muted-video slides. Autoplay always has a pause button and stops for reduced-motion visitors.</td></tr>
+    <tr><td>Image banner, Image with text, Rich text</td><td>Campaign banners, editorial stories and text blocks.</td></tr>
+    <tr><td>Collection gateways, Collection collage</td><td>Large tiles into key collections, or two to five collections in a mosaic.</td></tr>
+    <tr><td>Featured collection</td><td>Products from one collection as a grid or a swipeable row.</td></tr>
+    <tr><td>Featured product</td><td>One product on the inspection stage with its media, options and buy buttons, on any page.</td></tr>
+    <tr><td>Ring carousel</td><td>Products or your own images on a curved ring: the front item is lit, the others tilt back. A flat swipe row on phones and with motion off.</td></tr>
+    <tr><td>Bundle builder</td><td>Slots of products to swap through, each with its own variant, a live total and one <em>Add bundle to cart</em>. Products that need a subscription or gift card details, and sold-out products, link to their page instead; minimum quantities are added and counted.</td></tr>
+    <tr><td>Promo grid</td><td>A campaign grid of image, video, product, collection and sale-text tiles with their own widths.</td></tr>
+    <tr><td>Shoppable image</td><td>Numbered hotspots on a photo, each opening a product card or a note; or a lookbook with a product list.</td></tr>
+    <tr><td>Brand showcase</td><td>One vendor’s story and logo beside its products.</td></tr>
+    <tr><td>Quick order list</td><td>Every variant of a product or collection in one table with quantity steppers, a live subtotal and <em>Add all to cart</em>; follows quantity rules.</td></tr>
+    <tr><td>Before/after slider</td><td>Two images compared with a draggable divider; works with the keyboard too.</td></tr>
+    <tr><td>Video</td><td>An uploaded video, YouTube or Vimeo; the player loads only when played.</td></tr>
+    <tr><td>Testimonials, Logo list</td><td>Real customer quotes and real press mentions or stockists.</td></tr>
+    <tr><td>Timeline</td><td>Milestones on a circuit trace that lights up node by node.</td></tr>
+    <tr><td>Text columns with images</td><td>Two to six columns, optionally numbered as steps.</td></tr>
+    <tr><td>Map</td><td>Your address and opening hours; the map loads only after a click, with no API key.</td></tr>
+    <tr><td>Blog posts</td><td>The latest posts from one blog as cards.</td></tr>
+    <tr><td>Countdown</td><td>Counts down to a real end date. See <a href="conversion.html">Conversion tools</a>.</td></tr>
+    <tr><td>Service benefits, FAQ, Scrolling text, Newsletter</td><td>Short promises with icons, questions and answers, a marquee, an email signup.</td></tr>
+    <tr><td>Best sellers, Recently viewed, Related products, Product recommendations</td><td>Automatic product rows from your sales, the visitor’s history (kept in their browser) and Shopify’s recommendations.</td></tr>
+    <tr><td>Contact form, Category map</td><td>The contact form with your own fields; the interactive category map (see <a href="categories.html">Categories</a>).</td></tr>
+    <tr><td>Custom Liquid</td><td>Liquid, HTML or an app’s embed code.</td></tr>
+  </tbody>
 </table>
 
 <h2>Page templates</h2>
 <table>
-  <tr><th>Template</th><th>Use it for</th></tr>
-  <tr><td>page.contact</td><td>The contact form. Add <strong>Field</strong> blocks for your own questions (order number, topic, date…).</td></tr>
-  <tr><td>page.vendors</td><td>An A–Z list of your brands, each linking to its products.</td></tr>
-  <tr><td>page.categories</td><td>The interactive category map. See <a href="categories.html">Categories</a>.</td></tr>
-  <tr><td>page.faq</td><td>Questions and answers with FAQ data for search engines turned on. Replace the sample questions with your own.</td></tr>
-  <tr><td>page.about</td><td>Your story (image with text), a timeline, values (text columns) and customer quotes.</td></tr>
-  <tr><td>product.preorder</td><td>Products not out yet: the button reads Pre-order, a note says when it ships, and a countdown to the release date (set it in the countdown section) appears below.</td></tr>
-  <tr><td>product.drop</td><td>A limited drop: countdown above the product, specifications, and Notify me for sold-out sizes.</td></tr>
-  <tr><td>product.high-variant</td><td>Products with many variants (Shopify allows up to 2,048): dropdowns instead of button grids. To check it, assign it to your largest product and step through each option.</td></tr>
-  <tr><td>collection.landing</td><td>A collection used as a landing page: a banner with the collection title, sub-collection tiles and featured product rows instead of the full product grid.</td></tr>
+  <thead><tr><th>Template</th><th>Use it for</th></tr></thead>
+  <tbody>
+    <tr><td>page.contact</td><td>The contact form; add Field blocks for your own questions.</td></tr>
+    <tr><td>page.about</td><td>Your story, a timeline, values and customer quotes.</td></tr>
+    <tr><td>page.faq</td><td>Questions and answers, with FAQ data for search engines.</td></tr>
+    <tr><td>page.vendors</td><td>An A–Z list of your brands.</td></tr>
+    <tr><td>page.categories</td><td>The interactive category map. See <a href="categories.html">Categories</a>.</td></tr>
+    <tr><td>collection.landing</td><td>A collection as a landing page: a banner, sub-collection tiles and product rows.</td></tr>
+    <tr><td>Product templates</td><td>See <a href="products.html">Products</a>.</td></tr>
+  </tbody>
 </table>
-<p>Assign a template in the product, collection or page editor under <strong>Theme template</strong>.</p>
+<p>Assign a template in the page, product or collection editor under <em>Theme template</em>.</p>
 
   </main>
 </div>
 <footer class="foot">
-  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
 </footer>
 </body>
 </html>

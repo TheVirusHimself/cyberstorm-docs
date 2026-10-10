@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cart · CyberStorm theme documentation</title>
-<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<title>Cart · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
 <link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
-  <span class="version">v1.1.0</span>
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
 </header>
 <div class="shell">
   <nav class="nav" aria-label="Documentation">
     <ol>
       <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
       <li><a href="theme-settings.html">Theme settings</a></li>
       <li><a href="sections.html">Sections</a></li>
       <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
       <li><a href="collections-search.html">Collections & search</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="cart.html" aria-current="page">Cart</a></li>
@@ -35,36 +37,41 @@
 <p class="lead">Adding to cart sends the product photo flying into the header cart, then opens the cart drawer. The cart page offers the same features at full width.</p>
 
 <h2>Cart drawer</h2>
+<p>Its settings are in the theme editor under <strong>Cart drawer</strong> (open the cart in the editor’s preview, or find it in the section list).</p>
 <table>
-  <tr><th>Setting</th><th>What it does</th></tr>
-  <tr><td>Use cart drawer</td><td>When off, Add to cart goes straight to the cart page.</td></tr>
-  <tr><td>Open the drawer after adding</td><td>When off, the product flies into the cart and the count updates, and shoppers stay on the page.</td></tr>
-  <tr><td>Order note</td><td>A field for delivery instructions, visible on the order in your admin.</td></tr>
-  <tr><td>Suggestions</td><td>Up to three products under the cart items: your complementary pairings from Search &amp; Discovery first, then related products. They load only when the drawer opens.</td></tr>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Use cart drawer</td><td>When off, Add to cart goes straight to the cart page.</td></tr>
+    <tr><td>Open the drawer after adding</td><td>When off, the product flies into the cart, the count updates and shoppers stay on the page.</td></tr>
+    <tr><td>Show order note</td><td>A field for delivery instructions, visible on the order in your admin.</td></tr>
+    <tr><td>Show suggestions</td><td>Up to three products under the cart items: your complementary pairings from Search &amp; Discovery first, then related products. They load only when the drawer opens.</td></tr>
+    <tr><td>“Continue shopping” collection</td><td>An empty cart shows three products from this collection.</td></tr>
+  </tbody>
 </table>
 
-<h2 id="free-shipping">Free shipping progress</h2>
-<p><strong>Theme settings &gt; Cart &gt; Free shipping threshold</strong> shows a progress bar in the cart drawer and at the top of the cart page summary, in your store currency. Match it to your shipping settings; 0 hides it, and it also hides for shoppers paying in another currency. The first time a shopper reaches the goal in a visit, the bar fills, flashes once and then holds in the success color.</p>
+<h2>Changing quantities</h2>
+<p>Shoppers can change several lines quickly: changes are gathered and saved together, and a change made while another is saving is never lost. Quantity rules (minimum, maximum, increments) are followed and explained on the line. If Shopify refuses a change (for example, not enough stock), the line goes back to the last saved quantity and says why. The drawer and the cart page always show the same cart.</p>
 
-<h2 id="gift-wrap">Gift wrap</h2>
-<p>Offer gift wrapping without an app:</p>
+<h2>Free shipping progress</h2>
+<p>Theme settings → Cart → <strong>Free shipping threshold</strong> shows a progress bar in the cart drawer and the cart page, in your store currency. It is a simple total-based reminder, not a check of each shopper’s shipping address or rates: set it to match your shipping settings, and leave it at 0 (hidden) if free shipping depends on the destination or the products.</p>
+
+<h2>Gift wrap</h2>
 <ol>
-  <li>In <strong>Products</strong>, create a product called, for example, "Gift wrap", with its price and a photo. Turn off <strong>Track quantity</strong> (and <strong>This is a physical product</strong> if wrapping adds no weight).</li>
-  <li>In the theme editor, open <strong>Theme settings &gt; Cart</strong> and choose it as the <strong>Gift wrap product</strong>.</li>
+  <li>In Products, create a product such as “Gift wrap”, with its price and a photo. Turn off <em>Track quantity</em>.</li>
+  <li>In Theme settings → Cart, choose it as the <strong>Gift wrap product</strong>.</li>
 </ol>
-<p>The cart drawer and the cart page now show <strong>Add gift wrap</strong> with the price. Ticking it adds the product once; unticking removes it. The gift wrap line in the cart has no quantity stepper and wears a neon ribbon on its photo.</p>
-<p>With <strong>Show a gift note field</strong> on, a note box appears once gift wrap is ticked. The note is saved on the order as <strong>Gift note</strong> (in the order's Additional details), so you can print it on a card.</p>
+<p>The cart drawer and cart page then show <em>Add gift wrap</em> with the price. With <strong>Show a gift note field</strong> on, a note box appears once gift wrap is ticked; the note is saved on the order as “Gift note”.</p>
 
-<h2 id="terms">Terms checkbox</h2>
-<p>Turn on <strong>Theme settings &gt; Cart &gt; Require agreeing to terms</strong> to add an "I agree to the terms and conditions" checkbox above checkout in the cart drawer and on the cart page. Checkout stays disabled, with a short hint, until it is ticked; express payment buttons on the cart page are dimmed until then. The link goes to the page you choose, or to your Terms of service policy.</p>
+<h2>Terms checkbox</h2>
+<p>Theme settings → Cart → <strong>Require agreeing to terms</strong> adds an “I agree to the terms and conditions” checkbox above checkout; checkout stays disabled until it is ticked. Choose the <strong>Terms page</strong> it links to.</p>
 
 <h2>Discounts and checkout</h2>
-<p>Discounts appear on cart lines and totals as Shopify applies them. Accelerated checkout buttons show on the cart page. Checkout itself is Shopify’s and is set up in your Shopify settings, not in the theme.</p>
+<p>Discounts appear on cart lines and totals as Shopify applies them. Accelerated checkout buttons show on the cart page. Checkout itself is Shopify’s and is set up in your Shopify settings.</p>
 
   </main>
 </div>
 <footer class="foot">
-  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
 </footer>
 </body>
 </html>

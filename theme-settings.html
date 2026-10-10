@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theme settings · CyberStorm theme documentation</title>
-<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<title>Theme settings · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
 <link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
-  <span class="version">v1.1.0</span>
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
 </header>
 <div class="shell">
   <nav class="nav" aria-label="Documentation">
     <ol>
       <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
       <li><a href="theme-settings.html" aria-current="page">Theme settings</a></li>
       <li><a href="sections.html">Sections</a></li>
       <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
       <li><a href="collections-search.html">Collections & search</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="cart.html">Cart</a></li>
@@ -34,71 +36,72 @@
 <h1>Theme settings</h1>
 <p class="lead">Store-wide choices live in the theme editor under <strong>Theme settings</strong> (the gear icon). They apply to every page.</p>
 
+<h2>Presets</h2>
+<p>Three starting points, each a full set of colors, fonts and frames: <strong>Cyber</strong> (silver and gold, white frames), <strong>Exhibition</strong> (dark, with brass) and <strong>Drop</strong> (bright, with frame lines in the text color). Choosing a preset changes these settings, not your content.</p>
+
 <h2>Logo and favicon</h2>
-<p>The <strong>favicon</strong> is the small icon in browser tabs, bookmarks and phone home screens. Upload a square image of at least 180 × 180 px; the theme makes the 32 px tab icon and the 180 px home screen icon from it. The logo itself is set in the header section.</p>
+<p>The favicon is the small icon in browser tabs, bookmarks and phone home screens: upload a square image of at least 180 × 180 px. The logo itself is set in the Header section.</p>
 
 <h2>Typography</h2>
 <table>
-  <tr><th>Setting</th><th>What it does</th></tr>
-  <tr><td>Display</td><td>Large headings. Condensed, heavy fonts suit the theme best.</td></tr>
-  <tr><td>Body and interface</td><td>Paragraphs, buttons, menus and forms. Choose something easy to read at small sizes.</td></tr>
-  <tr><td>Readout</td><td>Prices, labels and specifications. A monospace font keeps numbers aligned.</td></tr>
-  <tr><td>Heading size</td><td>Scales every large heading at once.</td></tr>
-  <tr><td>Uppercase headings</td><td>Sets large headings in capitals, the HUD look.</td></tr>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Display</td><td>Headings, product names and the names in lists. Every heading takes this font’s own weight. The default is IBM Plex Mono, the instrument-label look.</td></tr>
+    <tr><td>Body and interface</td><td>Paragraphs, buttons, menus and forms.</td></tr>
+    <tr><td>Readout</td><td>Prices, labels and small readouts. A monospace font keeps numbers aligned.</td></tr>
+    <tr><td>Heading size</td><td>Scales every large heading at once.</td></tr>
+    <tr><td>Uppercase headings</td><td>Sets headings in capitals with open letter spacing (on by default).</td></tr>
+  </tbody>
 </table>
 
 <h2>Colors</h2>
-<p>Five color schemes. Each section picks one, so you can alternate dark and bright bands down a page. Each scheme sets background, text, panels, decorative lines, two accents, the button, and status colors for in stock, sold out and sale.</p>
+<p>Five color schemes. Each section picks one, so you can alternate bands down a page. A scheme sets the background, text, panels, lines, the accent (prices, highlights), the button and its label, and status colors. The frames drawn around panels, hexagons and rings take the colors of the scheme they sit in; the first scheme also colors the header and anything without a section of its own.</p>
 
 <h2>Layout</h2>
 <table>
-  <tr><th>Setting</th><th>What it does</th></tr>
-  <tr><td>Page width and margin</td><td>How wide content grows on large screens and the space at the screen edges.</td></tr>
-  <tr><td>Panel corners</td><td>Notched corners are the HUD look; square suits a calmer store.</td></tr>
-  <tr><td>Section spacing</td><td>Scales the top and bottom spacing of every section at once.</td></tr>
-  <tr><td>Transparency</td><td>Lets the city and rain show through section backgrounds and panels. Keep panels opaque enough for easy reading.</td></tr>
-  <tr><td>Breadcrumbs, back to top</td><td>Navigation aids for inner pages and long pages.</td></tr>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Page width and margin</td><td>How wide content grows on large screens and the space at the screen edges.</td></tr>
+    <tr><td>Section spacing</td><td>Scales the top and bottom spacing of every section at once.</td></tr>
+    <tr><td>Transparency</td><td>How much the cloud backdrop shows through section backgrounds and panels.</td></tr>
+    <tr><td>Panel corners</td><td>Notched (the HUD look) or square.</td></tr>
+    <tr><td>Breadcrumbs, back to top</td><td>Navigation aids for inner and long pages.</td></tr>
+  </tbody>
 </table>
-
-<h2>Motion and effects</h2>
-<p>Section reveals, depth scrolling and brief glitch effects on headings. Glitches never touch prices, buttons or checkout. People who set their device to reduce motion always get a still, fully visible store, whatever you choose here.</p>
 
 <h2>Cart</h2>
-<p><strong>Gift wrap product</strong> and <strong>Show a gift note field</strong>: see <a href="cart.html#gift-wrap">Cart &gt; Gift wrap</a>. Leave the product empty to hide gift wrapping.</p>
+<p>Free shipping threshold, gift wrap product, gift note and the terms checkbox. See <a href="cart.html">Cart</a>.</p>
 
-<h2 id="favorites">Favorites</h2>
-<p><strong>Show favorites</strong> puts a heart on every product card and a <strong>Save</strong> button under the product title. Saved products appear in a drawer opened by the heart in the header (on narrow phones, from the menu). The list lives in the shopper's own browser: no customer account, no app, and nothing is sent to you or anyone else, so it is kept per device.</p>
+<h2>Favorites</h2>
+<p><strong>Show favorites</strong> puts a heart on product cards and a Save button on product pages; saved products open in a drawer from the header. The list is saved <em>in the shopper’s browser only</em> (the drawer says so): it is not shared with you or kept across devices. Off by default.</p>
 
-<h2 id="compare">Compare</h2>
-<p><strong>Show Compare on product cards</strong> adds a Compare toggle to every card. Shoppers pick up to four products; a tray docks at the bottom of the screen, and <strong>Compare</strong> opens a side-by-side table with price, product type, brand, every option and every product metafield in the <code>specs</code> namespace (for example <code>specs.battery_life</code> or <code>specs.weight</code>, shown under readable names). Rows where the products differ are marked. The picks stay in the shopper's browser. Ideal for electronics and gear: create the metafield definitions under <strong>Settings &gt; Custom data &gt; Products</strong> with the namespace <code>specs</code>.</p>
+<h2>Compare</h2>
+<p><strong>Show Compare on product cards</strong> lets shoppers pick up to four products and compare them side by side: price, type, brand, every option and your specifications.</p>
 
 <h2>Badges</h2>
-<p>“New” shows on products published within the number of days you set (0 turns it off). Tag a product <code>badge:Limited</code> to show a “Limited” badge; any text after <code>badge:</code> works. Sold out and sale badges come from inventory and prices.</p>
-
-<p><strong>Show savings</strong> adds a sale chip next to discounted prices on cards and product pages, as an amount (Save $10) or a percentage (Save 20%). It is not shown for "From" prices that vary between variants.</p>
+<ul>
+  <li><strong>“New”</strong> shows on products published within the days you set (0 turns it off).</li>
+  <li><strong>Badges from tags:</strong> tag a product <code>badge:Limited</code> to show “Limited”; any text after <code>badge:</code> works.</li>
+  <li><strong>Show savings</strong> adds a chip next to sale prices, as an amount or a percentage.</li>
+  <li><strong>Archive tag</strong> (default <code>archive</code>): sold-out products with this tag read “Archived” instead of “Sold out” and offer no restock request. See <a href="products.html">Products</a>.</li>
+</ul>
 
 <h2>Social media</h2>
-<p>Paste your full profile links: Instagram, TikTok, YouTube, X, Facebook, Pinterest, Threads, LinkedIn, Snapchat, Tumblr, Vimeo, Discord and Twitch. Links appear in the footer; empty fields are hidden, or use the social links saved in <strong>Settings &gt; Brand</strong> when there are any.</p>
+<p>Your profile links (Instagram, TikTok, YouTube, X, Facebook, Pinterest, Threads, LinkedIn, Snapchat, Tumblr, Vimeo, Discord, Twitch) appear in the footer; empty fields are hidden. <em>Sharing options</em> choose the networks the Share block offers next to Copy link.</p>
 
-<p><strong>Sharing options</strong> choose the networks (Facebook, X, Pinterest) the Share block offers next to <strong>Copy link</strong>. On phones, Share opens the phone's own share sheet instead.</p>
+<h2>Motion and effects</h2>
+<p><strong>Motion</strong>: Off, Subtle or Expressive, for section reveals and depth scrolling on regular pages. People who set their device to reduce motion always get a still store, whatever you choose. <strong>Show keyboard hints</strong> shows small keycaps such as Esc next to controls, only to visitors using a mouse and keyboard.</p>
+
+<h2>Storm (the 3D space)</h2>
+<p>The view visitors start in, the stop menu’s position, the sky, ground, city and clouds, the backdrop on regular pages, the outer glow and frame lines, and what phones show. See <a href="space.html">The 3D space</a>.</p>
 
 <h2>Categories</h2>
-<p>Connects the theme to your category tree. See <a href="categories.html">Categories</a>.</p>
-
-<h2>Storm</h2>
-<table>
-  <tr><th>Part</th><th>Settings</th></tr>
-  <tr><td>Storm background</td><td>Turn the whole effect on or off, and place the pause button.</td></tr>
-  <tr><td>Rain</td><td>Glyph set (including your own characters), colors, density, speed, trail, size, angle, opacity, and behavior on phones (full, reduced or off).</td></tr>
-  <tr><td>Lightning</td><td>A strike on page change, random strikes, color and brightness. Never more than two flashes a second.</td></tr>
-  <tr><td>City</td><td>Building and window colors, opacity, depth on scroll, and your own artwork for each of the three layers.</td></tr>
-</table>
-<div class="note">On slower phones, choose <em>Reduced</em> for rain on mobile. The storm waits until the page has loaded before it starts.</div>
+<p>Connects the theme to your own category tree. See <a href="categories.html">Categories</a>.</p>
 
   </main>
 </div>
 <footer class="foot">
-  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
 </footer>
 </body>
 </html>

@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Collections & search · CyberStorm theme documentation</title>
-<meta name="description" content="Documentation for the CyberStorm Shopify theme: setup, settings, sections and support.">
+<title>Collections &amp; search · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
 <link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html">CYBERSTORM <span>// docs</span></a>
-  <span class="version">v1.1.0</span>
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
 </header>
 <div class="shell">
   <nav class="nav" aria-label="Documentation">
     <ol>
       <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
       <li><a href="theme-settings.html">Theme settings</a></li>
       <li><a href="sections.html">Sections</a></li>
       <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
       <li><a href="collections-search.html" aria-current="page">Collections & search</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="cart.html">Cart</a></li>
@@ -32,35 +34,44 @@
   </nav>
   <main id="content" class="content" tabindex="-1">
 <h1>Collections &amp; search</h1>
-<p class="lead">Collection and search pages share filters, sorting and the product grid.</p>
+<p class="lead">A collection page is a short route of its own: the collection’s stop first, then its products in batches of up to twelve, each batch a honeycomb of framed hexagons.</p>
 
-<h2>Filters</h2>
-<p>Filters come from Shopify’s free <strong>Search &amp; Discovery</strong> app. Open it and choose <strong>Filters → Add filter</strong> for availability, price, product type, vendor, tags, color, size and any product metafields. The theme shows whatever you enable.</p>
+<h2>The collection’s stop</h2>
 <ul>
-  <li>Set the <strong>Color</strong> filter to display as swatches for color tiles instead of words.</li>
-  <li>Long value lists fold away after the first eight with a “Show more” link.</li>
-  <li>On phones, filters open in a drawer.</li>
+  <li>The collection title, product count, description, sorting and filters on one panel.</li>
+  <li><strong>Show the collection image</strong> (on by default) places the collection’s own image (Products → Collections → the collection → Image) beside the panel.</li>
+  <li><strong>Next</strong> flies to the first batch.</li>
 </ul>
 
-<h2>Pagination</h2>
-<p>Choose page numbers, a <strong>Load more</strong> button or loading as shoppers scroll. Filters and sorting are kept either way, and numbered links remain as a fallback.</p>
+<h2>Batches and the honeycomb</h2>
+<table>
+  <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Products per page</td><td>6 to 48. Each page is split into batches of up to twelve, one stop each; further pages get a <em>Next page</em> stop.</td></tr>
+    <tr><td>Hexagon size</td><td><strong>Large</strong> (default) and <strong>Extra large</strong> keep four columns at a big size; a batch scrolls down inside its stop. <strong>Compact</strong> fits a batch on one screen as a wide band.</td></tr>
+    <tr><td>Show collection description, Show filters, Show sorting</td><td>What the collection’s stop carries.</td></tr>
+    <tr><td>Turn left/right, Lean back/forward</td><td>The angle of the batches in the scene; flat by default.</td></tr>
+  </tbody>
+</table>
+<p>Each photo fills its hexagon (it is cropped, not shrunk), so photos with the product centred and some space around it work best. A small last batch joins the one before it; batches of six or fewer sit as a balanced zig-zag.</p>
+<p><strong>Hover card:</strong> pointing at a hexagon opens a large card beside it with the photo, maker, name, price (with the compare-at price and saving), stock, type, options, a short description and a link. On touch screens the first tap opens the card and the second opens the product. The batch’s <em>Selected</em> line always names the piece last pointed at.</p>
 
-<h2>Promo tiles</h2>
-<p>In the collection section, add <strong>Promo tile</strong> blocks to place campaign cards between products (after product N, optionally two columns wide). They show on the first page only.</p>
+<h2>Filters</h2>
+<p>Filters come from Shopify’s free <strong>Search &amp; Discovery</strong> app: Filters → Add filter for availability, price, product type, vendor, tags, color, size and product metafields. They appear in the collection’s stop as a row of chips; applying one reloads the route with the matching products.</p>
 
 <h2>Search</h2>
-<p>The header search field shows live suggestions as shoppers type: products, collections, pages and articles. The search results page shows products in a grid and other results below.</p>
+<p>The header search shows live suggestions as shoppers type: products, collections, pages and articles. The search page lists products as framed cards with filters and sorting, and other results below.</p>
 
-<h3>Command palette</h3>
-<p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (<kbd>⌘</kbd> + <kbd>K</kbd> on a Mac) on any page, or tap the search icon on a phone, to open the search console. With nothing typed it lists quick commands: the cart, favorites (when on), all collections, a few collections, the account and the products this visitor viewed recently (kept in their browser only). Typing switches to live suggestions. Arrow keys move through either list and Enter opens the highlighted line. With <strong>Show keyboard hints</strong> on, the console shows its shortcut.</p>
+<h2>Command palette</h2>
+<p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (<kbd>⌘</kbd> + <kbd>K</kbd> on a Mac) on any page to open the search console. With nothing typed it lists quick commands and recently viewed products.</p>
 
-<h2>Brands</h2>
-<p>Create a page with the <strong>page.vendors</strong> template for an A–Z list of your brands. Each brand links to a page with all of its products.</p>
+<h2>All collections and brands</h2>
+<p>The collections list page shows every collection with products (Shopify’s empty Home page collection is left out). A page with the <code>page.vendors</code> template lists your brands from A to Z, each linking to its products.</p>
 
   </main>
 </div>
 <footer class="foot">
-  <p>CyberStorm Shopify theme · <a href="support.html">Get support</a></p>
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
 </footer>
 </body>
 </html>
