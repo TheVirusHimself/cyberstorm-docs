@@ -77,6 +77,8 @@
 <ul>
   <li><code>v</code> is the format version, always <code>1</code>.</li>
   <li><code>p</code> has one row per price change, oldest first: the day the price started (<code>YYYY-MM-DD</code>), the price as a number in your store currency (a dot for decimals, no currency sign), and optionally the compare-at price at the time.</li>
+  <li><strong>Variants:</strong> a product-level history describes the product's lowest price; the chart ends at that, whichever variant is chosen. When variants have their own price paths, give a variant its own <code>cyber.price_history</code> metafield (same format, on the variant): it is used for that variant, ending at its price.</li>
+  <li><strong>Currency:</strong> the history is recorded in your store currency, so it shows only to shoppers who see prices in that currency; with other currencies (Markets) it stays hidden rather than relabelling numbers.</li>
   <li>Only the days a price changed are needed; daily rows work too, repeats are skipped. Rows dated in the future are ignored.</li>
   <li>Today’s price needs no row: the theme adds the product’s current price, so the line always ends at what the shopper pays now.</li>
   <li>The history appears once a product has at least one price change or 30 days of history.</li>
