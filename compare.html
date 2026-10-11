@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare · Cyber theme documentation</title>
+<meta name="description" content="Documentation for the Cyber Shopify theme: the 3D space, setup, settings, sections and support.">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">CYBER <span>// docs</span></a>
+  <span class="version">v1.0.0</span>
+</header>
+<div class="shell">
+  <nav class="nav" aria-label="Documentation">
+    <ol>
+      <li><a href="index.html">Getting started</a></li>
+      <li><a href="space.html">The 3D space</a></li>
+      <li><a href="theme-settings.html">Theme settings</a></li>
+      <li><a href="sections.html">Sections</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="price-data.html">Price data</a></li>
+      <li><a href="compare.html" aria-current="page">Compare</a></li>
+      <li><a href="collections-search.html">Collections & search</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="conversion.html">Conversion tools</a></li>
+      <li><a href="languages-accessibility.html">Languages & accessibility</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+  </nav>
+  <main id="content" class="content" tabindex="-1">
+<h1>Compare</h1>
+<p class="lead">Shoppers compare up to four products side by side on a page of its own: photos and names across the top, then price, availability, brand, type, every option and your specifications. On by default (Theme settings → Compare → <em>Show Compare on product cards</em>).</p>
+
+<h2>Where shoppers pick products</h2>
+<ul>
+  <li><strong>Product pages:</strong> a <em>Compare</em> toggle next to Save, and <strong>Compare with similar</strong>, which opens the page with this product and up to three of the same type from its collections (Shopify’s related products fill any gaps).</li>
+  <li><strong>The catalogue:</strong> a <em>Compare</em> toggle in each batch’s Selected line, for the piece last pointed at.</li>
+  <li><strong>Product cards</strong> elsewhere (search, featured collections, recommendations).</li>
+</ul>
+<p>Picks are kept in the shopper’s browser. A tray docks at the bottom of the screen with them; its <em>Compare</em> button opens the page.</p>
+
+<h2>The compare page</h2>
+<ul>
+  <li><strong>Shareable:</strong> the products are in the page address, so a comparison can be copied (<em>Copy link</em>) and opened by anyone.</li>
+  <li><strong>Only differences</strong> hides rows where every product agrees; rows that differ are marked.</li>
+  <li>Each product can be removed; with fewer than four, a slot invites adding another.</li>
+  <li>The last row adds single-variant products to the cart, or opens the product to choose options.</li>
+  <li>On phones about two products show at a time; swipe sideways, the row labels stay in place.</li>
+</ul>
+
+<h2>Specifications</h2>
+<p>Every product metafield in the <code>specs</code> namespace becomes a row, named after its key (<code>specs.battery_life</code> → Battery life). Create them under Settings → Custom data → Products, then fill them on each product.</p>
+
+<h2>Its own address (optional)</h2>
+<p>The compare page works without setup. To give it an address for your menus, create a page (Online Store → Pages) with the <code>compare</code> template and choose it in Theme settings → Compare → <em>Compare page</em>.</p>
+
+  </main>
+</div>
+<footer class="foot">
+  <p>Cyber Shopify theme · <a href="support.html">Get support</a></p>
+</footer>
+</body>
+</html>
