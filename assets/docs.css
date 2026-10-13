@@ -1,4 +1,4 @@
-/* Cyber documentation: the theme's silver-and-gold palette, tuned for long reading. */
+/* Cypher documentation: the theme's silver-and-gold palette, tuned for long reading. */
 :root {
   --bg: #f2f2f0;
   --surface: #ffffff;
@@ -121,7 +121,7 @@ a:hover { color: var(--accent); }
   .content { padding: 24px 16px 48px; }
 }
 
-/* Cyber: headings in the mono HUD style, buttons in gold with a dark label. */
+/* Cypher: headings in the mono HUD style, buttons in gold with a dark label. */
 h1, h2, h3, h4 {
   font-family: var(--mono);
   font-weight: 500;
